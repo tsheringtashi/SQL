@@ -1,0 +1,10 @@
+# SQL order of operations
+
+1. FROM
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. ORDER BY
+
+the SELECT OPERATIONS   execute at the end. However, it is written in the begining of the script as it follows the diravative language for human to understand. Therefore, Alias can't be used in HAVING and above operations. Alias can be used in ORDER BY operations. 
