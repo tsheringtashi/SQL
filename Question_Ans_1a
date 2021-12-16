@@ -1,0 +1,12 @@
+q. write a query to return invoiceNumber and TotalProductCost from the FactInternetSales table.
+1. return only invoices that have a total product cost per invoice number > 2000.
+
+SELECT 
+SalesOrderNumber as InvoiceNumber, 
+SUM(TotalProductCost) As TotalProductCost
+
+FROM FactInternetSales
+GROUP BY SalesOrderNumber
+HAVING SUM(TotalProductCost) >2000
+
+ORDER BY TotalProductCost DESC
