@@ -1,0 +1,7 @@
+we need a detailed list of invoices and invoice line numbers, but we are only interested in currency key 100.
+
+1. write a query to return invoice number, invoice linenumber and salesamount from factinternetsales table.
+2. return only lines WHERE the currency key is 100.
+
+
+WHERE CurrencyKey = 100
