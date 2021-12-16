@@ -1,0 +1,10 @@
+SELECT 
+SalesOrderNumber as InvoiceNumber, 
+OrderDate,
+SUM(SalesAmount) AS InvoiceSubTotal,
+SUM(TaxAmt) AS TaxAmount,
+SUM(OrderQuantity) AS TotalQuantity
+
+FROM FactInternetSales
+GROUP BY SalesOrderNumber, OrderDate
+HAVING SUM(SalesAmount)>1000
