@@ -13,4 +13,4 @@ FROM FactInternetSales
 GROUP BY SalesOrderNumber, OrderDate
 HAVING SUM(SalesAmount)>1000
 
-ORDER BY invoiceTotal DSC.
+ORDER BY invoiceTotal DESC
