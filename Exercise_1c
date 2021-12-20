@@ -1,0 +1,6 @@
+ELECT DISTINCT
+SalesTerritoryKey as SalesTerritory
+
+
+FROM FactInternetSales
+ORDER BY SalesTerritory ASC
