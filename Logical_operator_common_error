@@ -1,0 +1,12 @@
+SELECT
+
+EnglishProductName,
+EnglishDescription, 
+Color,
+[Status],  ---[] shows it is column.
+Class
+
+
+FROM DimProduct
+
+WHERE (Class <> 'H' OR Class IS NULL) AND [status] IS NOT NULL
