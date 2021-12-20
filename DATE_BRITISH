@@ -1,0 +1,15 @@
+
+SELECT
+
+MONTH('20211220') AS MonthNumerical
+
+
+SET LANGUAGE British
+
+SELECT
+
+MONTH('02/12/20') AS MonthNumerical
+
+
+
+
