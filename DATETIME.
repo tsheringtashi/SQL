@@ -3,6 +3,8 @@ GETDATE() AS DateTimeStamp,
 DueDate, 
 ShipDate, 
 DATEDIFF(day, ShipDate, DueDate) AS DaysBetweenShipandDueDate,
-DATEDIFF(hour, ShipDate, DueDate) AS HoursBetweenShipandDueDate
+DATEDIFF(hour, ShipDate, DueDate) AS HoursBetweenShipandDueDate,
+
+DATEADD(day, 10, DueDate) AS DueDatePlusTenDays
 
 FROM FactInternetSales
