@@ -1,0 +1,6 @@
+SELECT FirstName
+FROM  DimCustomer
+
+ -- WHERE FirstName LIKE 'R%'
+
+ WHERE FirstName LIKE '_R%'
