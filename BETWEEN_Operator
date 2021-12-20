@@ -1,0 +1,19 @@
+SELECT
+
+EnglishProductName,
+EnglishDescription, 
+Color,
+[Status], 
+Class,
+SafetyStockLevel
+
+
+
+FROM DimProduct
+
+-- WHERE (Class <> 'H' OR Class IS NULL) AND [status] IS NOT NULL
+
+
+WHERE (SafetyStockLevel BETWEEN 500 AND 1000) AND [Status] IS NOT NULL  --BETWEEN IS INCLUSIVE OF 500 AND 1000
+
+--WHERE Color IN ('Black', 'Silver', 'Yellow')
