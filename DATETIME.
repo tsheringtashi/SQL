@@ -1,0 +1,8 @@
+SELECT
+GETDATE() AS DateTimeStamp,
+DueDate, 
+ShipDate, 
+DATEDIFF(day, ShipDate, DueDate) AS DaysBetweenShipandDueDate,
+DATEDIFF(hour, ShipDate, DueDate) AS HoursBetweenShipandDueDate
+
+FROM FactInternetSales
