@@ -10,6 +10,6 @@ FROM FactInternetSales as fs
 
 GROUP BY dc.FirstName, dc.LastName, dc.EmailAddress
 
-ORDER BY AmountSpent
+ORDER BY AmountSpent DESC
 
 
