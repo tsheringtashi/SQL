@@ -1,0 +1,11 @@
+-- Write a query against the Factinternetsales table that returns orders placed in december for the sales territory 1.
+
+SELECT 
+
+SalesOrderNumber AS InvoiceNumber,
+SalesOrderLineNumber AS InvoiceLineNumber,
+SalesAmount AS SalesAmount,
+TaxAmt as TaxAmount
+
+FROM FactInternetSales
+WHERE DATENAME(month, OrderDate)=N'December' AND SalesTerritoryKey =1
