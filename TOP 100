@@ -2,10 +2,14 @@ SELECT TOP(100)
 
 CONCAT(dc.FirstName, ' ', dc.LastName) AS CustomerName,
 dc.EmailAddress AS EmailAddress,
-SUM(fs.SaleAmount) AS AmountSpent
+SUM(fs.SalesAmount) AS AmountSpent
 
 FROM FactInternetSales as fs 
     INNER JOIN DimCustomer as dc 
     ON fs.CustomerKey = dc.CustomerKey
 
 GROUP BY dc.FirstName, dc.LastName, dc.EmailAddress
+
+ORDER BY AmountSpent
+
+
