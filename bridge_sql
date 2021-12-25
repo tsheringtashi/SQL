@@ -1,0 +1,18 @@
+SELECT
+
+    fs.SalesOrderNumber AS InvoiceNumber,
+    fs.SalesOrderLineNumber AS InvoiceNumber,
+    dsr.SalesReasonReasonType AS SalesReason,
+    fs.SalesAmount AS SalesAmount
+
+
+
+
+FROM FactInternetSales AS fs 
+    INNER JOIN FactInternetSalesReason AS fsr 
+    ON fs.SalesOrderNumber = fsr.SalesOrderNumber AND fs.SalesOrderLineNumber = fsr.SalesOrderLineNumber
+    INNER JOIN DimSalesReason dsr 
+    ON fsr.SalesReasonKey = dsr.SalesReasonKey
+
+
+WHERE fs.SalesOrderNumber = N'SO51178'
